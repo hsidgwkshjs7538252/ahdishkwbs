@@ -14,7 +14,7 @@ bot.command('mp3',async ctx=>{
   const link = ctx.message.text.replace('/mp3 ','');
   if(link !== '' && link !== '/mp3'){
     
-    console.log(`${ctx.from.name}\n @${ctx.from.username}\n${link}`)
+    console.log(`${ctx.from.first_name}\n @${ctx.from.username}\n${link}`)
     
     const m = await ctx.reply('Downloading Audio...');
     const mid = await m.message_id;
