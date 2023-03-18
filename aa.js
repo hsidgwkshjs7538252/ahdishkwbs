@@ -28,7 +28,7 @@ bot.command('mp3',async ctx=>{
     aa.on('finish',()=>{
       bot.telegram.sendDocument(ctx.chat.id,{source:`./${tk}/audio.mp3`}).then(x=>{
         bot.telegram.deleteMessage(ctx.chat.id,mid)
-      })
+      }).catch(xx=>{ctx.reply('Something went wrong!')})
     })
     aa.pipe(fs.createWriteStream('./'+tk+'/audio.mp3'));
   }
