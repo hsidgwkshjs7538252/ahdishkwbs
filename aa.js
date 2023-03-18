@@ -2,6 +2,7 @@ const {Telegraf} = require('telegraf');
 const fs = require('fs');
 const crypto = require('crypto');
 const ytdl = require('ytdl-core')
+const fetch = require('node-fetch');
 
 const bot = new Telegraf('5442359215:AAEpSs8-0J2-42dmZC7Mjm07s-RRTUcBFMQ');
 
