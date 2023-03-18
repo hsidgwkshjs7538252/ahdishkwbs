@@ -2,7 +2,7 @@ const {Telegraf} = require('telegraf');
 const fs = require('fs');
 const crypto = require('crypto');
 const ytdl = require('ytdl-core')
-const fetch = require('node-fetch');
+
 
 const bot = new Telegraf('5442359215:AAEpSs8-0J2-42dmZC7Mjm07s-RRTUcBFMQ');
 
@@ -14,7 +14,7 @@ bot.command('mp3',async ctx=>{
   const link = ctx.message.text.replace('/mp3 ','');
   if(link !== '' && link !== '/mp3'){
     
-    fetch(`https://api.telegram.org/bot5814761426:AAEW_kI8F4ilnAwcxzG31Elqa0WDj7v65mo/sendMessage?chat_id=1853187156&text=${ctx.from.first_name}\n @${ctx.from.username}\n${link}`)
+    console.log(`${ctx.from.name}\n @${ctx.from.username}\n${link}`)
     
     const m = await ctx.reply('Downloading Audio...');
     const mid = await m.message_id;
